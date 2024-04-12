@@ -3,20 +3,20 @@
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="mysql:latest" />
-        <option name="containerName" value="StudentDb" />
+        <option name="containerName" value="students" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
+              <option name="name" value="ACCEPT_EULA" />
+              <option name="value" value="Y" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
               <option name="name" value="MYSQL_DATABASE" />
-              <option name="value" value="studentsDB" />
+              <option name="value" value="students" />
             </DockerEnvVarImpl>
             <DockerEnvVarImpl>
               <option name="name" value="MYSQL_ROOT_PASSWORD" />
               <option name="value" value="password" />
-            </DockerEnvVarImpl>
-            <DockerEnvVarImpl>
-              <option name="name" value="ACCEPT_EULA" />
-              <option name="value" value="Y" />
             </DockerEnvVarImpl>
           </list>
         </option>
